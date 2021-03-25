@@ -1,0 +1,46 @@
+{
+  "user": {
+    "id": {
+      "type": "binary(16)",
+      "key": "primary",
+      "nullable": false,
+      "default": false,
+      "a_i": false
+    },
+    "email": {
+      "type": "varchar(80)",
+      "key": "unique",
+      "nullable": false,
+      "default": false,
+      "a_i": false
+    },
+    "password": {
+      "type": "varchar(255)",
+      "key": false,
+      "nullable": false,
+      "default": false,
+      "a_i": false
+    },
+    "user_type": {
+      "type": "enum('student','faculty')",
+      "key": false,
+      "nullable": true,
+      "default": "student",
+      "a_i": false
+    },
+    "insert_date": {
+      "type": "timestamp",
+      "key": false,
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP",
+      "a_i": false
+    },
+    "delete_date": {
+      "type": "datetime",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    }
+  }
+}

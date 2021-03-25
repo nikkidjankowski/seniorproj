@@ -1,0 +1,60 @@
+{
+  "schedule": {
+    "id": {
+      "type": "binary(16)",
+      "key": "primary",
+      "nullable": false,
+      "default": false,
+      "a_i": false
+    },
+    "room_id": {
+      "type": "binary(16)",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    },
+    "user_id": {
+      "type": "binary(16)",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    },
+    "booking_day": {
+      "type": "date",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    },
+    "booking_time": {
+      "type": "time",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    },
+    "reason": {
+      "type": "varchar(255)",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    },
+    "insert_date": {
+      "type": "timestamp",
+      "key": false,
+      "nullable": true,
+      "default": "CURRENT_TIMESTAMP",
+      "a_i": false
+    },
+    "delete_date": {
+      "type": "datetime",
+      "key": false,
+      "nullable": true,
+      "default": false,
+      "a_i": false
+    }
+  }
+}

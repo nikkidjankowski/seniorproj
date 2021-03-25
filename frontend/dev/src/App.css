@@ -1,0 +1,13 @@
+html,body,#root{
+  height: 100%;
+}
+.main-container{
+  flex-direction: column;
+  height: 100%;
+}
+.o-y-auto{
+  overflow-y: auto;
+}
+.calendar-item{
+  height: 100px;
+}
