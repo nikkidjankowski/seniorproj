@@ -24,11 +24,6 @@ class ScheduleModel implements Model{
      */
     private static ?Database $db = null;
 
-    /**
-     * @param $method
-     * @param $args
-     * @return mixed
-     */
     public static function __callStatic($method, $args)
     {
         if(!method_exists(self::class, $method)){
@@ -39,9 +34,6 @@ class ScheduleModel implements Model{
         }
     }
 
-    /**
-     * @param array $providers
-     */
     public static function init(array $providers)
     {
         foreach ($providers as $key => $provider){

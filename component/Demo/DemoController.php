@@ -16,6 +16,7 @@ class DemoController extends Unicore
      */
     function init()
     {
+        redirect("frontend/web");
         $info = json_decode(file_get_contents(path . '/composer.json'), true);
         $info['installation'] = path;
         $info['base'] = base;

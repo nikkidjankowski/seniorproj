@@ -8,6 +8,7 @@
             <directory>index.php</directory>
             <directory>default.php</directory>
             <directory>./tests</directory>
+            <directory>./frontend</directory>
             <directory>./vendor</directory>
             <directory>./_neoan</directory>
             <directory>./asset</directory>

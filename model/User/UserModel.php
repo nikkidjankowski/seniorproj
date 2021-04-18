@@ -11,7 +11,7 @@ use Neoan3\Provider\MySql\Transform;
  * Class UserModel
  * @package Neoan3\Model\User
  * @method static get(string $id)
- * @method static update(array $modelArray)
+
  * @method static find(array $conditionArray)
  * @method static delete(string $id, bool $hard = false)
  */
@@ -36,6 +36,13 @@ class UserModel implements Model
         } else {
             return self::$method(...$args);
         }
+    }
+
+    public static function update($modelArray): array
+    {
+        $modelArray['password'] = '=' . password_hash($modelArray['password'], PASSWORD_DEFAULT);
+        $t = new Transform('user', self::$db);
+        return $t->update($modelArray);
     }
 
     /**

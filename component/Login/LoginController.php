@@ -40,9 +40,16 @@ class LoginController extends Demo{
         UserModel::init($this->provider);
         $user = UserModel::login($body);
         if($user){
-            $this->Auth->assign($user['id'],['all']);
-            return $user;
+           $auth = $this->Auth->assign($user['id'],['all',$user['user_type']]);
+            return ["user"=>$user,"token"=>$auth->getToken()];
         }
         throw new RouteException('Wrong Credentials',401);
+    }
+    function putLogin(array $body): array
+    {
+        $user = $this->Auth->restrict();
+        $body['id'] = $user->getUserId();
+        UserModel::init($this->provider);
+        return UserModel::update($body);
     }
 }

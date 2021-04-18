@@ -1,0 +1,12 @@
+.button{ 
+  @extend .b-1, .b-accent, .p-x-2, .p-y-1, .bg-transparent, .text-accent, .hover\:bg-accent, .hover\:text-white, .cursor-pointer;
+}
+
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  @extend .bg-black-50;
+}

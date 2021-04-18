@@ -2,11 +2,14 @@ import SelectRoom from "./SelectRoom"
 import {useState, useEffect} from "react";
 import api from "../utils/api";
 import * as dayjs from "dayjs";
+import BookingForm from "./BookingForm";
 
 function Calendar(props) {
     const [rooms, setRooms] = useState([]);
     const [schedule, setSchedule] = useState([]);
     const [days, setDays] = useState([]);
+    const [newBooking, setNewBooking] = useState(false);
+    const [selectedRoom, setSelectedRoom] = useState(null);
     const getDateString = (date) => {
         return dayjs(date).format("YYYY-MM-DD");
 
@@ -25,13 +28,28 @@ function Calendar(props) {
             } catch (e) {
                 console.log('you are not logged in')
             }
-            for (let i = 0; i < 7; i++) {
+            for (let i = 0; i < 31; i++) {
                 currentWeek.push(new Date(today.getTime() + ((24 * 60 * 60 * 1000) * i)))
             }
             setDays(currentWeek);
         }
         call();
     }, [])
+    const bookRoom = (time) => {
+        setNewBooking({time:time})
+
+    }
+    const confirmBooking = (reason) => {
+        api.post("/schedule",{
+            room_id:selectedRoom,
+            booking_day:dayjs(newBooking.time).format("YYYY-MM-DD"),
+            booking_time:dayjs(newBooking.time).format("HH:mm:ss"),
+            reason
+        }).then(result => {
+            setNewBooking(false)
+            selectRoom(selectedRoom)
+        })
+    }
     const renderSchedule = day => {
         let todaysSchedule = schedule.filter(item => {
 
@@ -39,8 +57,7 @@ function Calendar(props) {
         })
         const timeslots = [];
         for (let i = 8; i < 21; i++) {
-            const now = dayjs(`01-01-2021 ${i}:00:00`);
-
+            const now = dayjs(`${getDateString(day)} ${i}:00:00`);
             timeslots.push({
                 time: now,
                 appointments: todaysSchedule.filter(s => s.booking_time === now.format("HH:mm:ss"))
@@ -64,7 +81,8 @@ function Calendar(props) {
                     </div>
                 ) : (
                     <button
-                        className={"b-1 b-accent p-x-2 p-y-1 bg-transparent text-accent hover:bg-accent hover:text-white"}>
+                        onClick={()=> bookRoom(item.time)}
+                        className={"button"}>
                         book room
                     </button>
                 )}
@@ -74,6 +92,7 @@ function Calendar(props) {
 
 
     const selectRoom = async room => {
+        setSelectedRoom(room)
         let today = new Date();
         console.log(today);
         let search = getDateString(today);
@@ -90,18 +109,27 @@ function Calendar(props) {
     return (
         <div className="w-100p">
             <SelectRoom rooms={rooms} onSelected={selectRoom}/>
-            <div className="d-flex w-100p">
-                {days.map(day => (
-                    <div className="m-1 b-1 b-primary f-1" key={day.getTime()}>
-                        {dayjs(day).format('dd MM/DD')}
-                        <hr/>
-                        <div>
-                            {renderSchedule(day)}
-                        </div>
+            {selectedRoom && (
+                <div className="d-flex w-100p">
+                    {days.map(day => (
+                        <div style={{minWidth:160}} className="m-1 b-1 b-primary f-1" key={day.getTime()}>
+                            <div style={{height:45}}>
+                                {dayjs(day).format("dddd")} <br/>
+                                {dayjs(day).format("MM/DD")} 
+                            </div>
+                            <hr/>
+                            <div>
+                                {renderSchedule(day)}
+                            </div>
 
-                    </div>
-                ))}
-            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+
+            {newBooking&&  <BookingForm time={newBooking} onBooking={confirmBooking}/>}
+
+
 
         </div>
     )

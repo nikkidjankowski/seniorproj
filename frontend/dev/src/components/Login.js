@@ -14,7 +14,8 @@ function Login(props) {
                 email,
                 password
             })
-            sessionStorage.setItem('user', JSON.stringify(data))
+            sessionStorage.setItem('user', JSON.stringify(data.user))
+            sessionStorage.setItem('token', data.token)
             props.updateSession();
             history.push("/");
         } catch(e){
@@ -26,6 +27,10 @@ function Login(props) {
     }
 
     return (
+        <div>
+            <p>Welcome To WeReserve!</p>
+            <p>The only app made to reserve rooms in Weir Hall at Ole Miss!</p>
+            <p className={"font-strong"}>Please sign in using your Ole Miss email!</p>
         <form onSubmit={callLogin}>
             <input type="email" value={email} onChange={ev => setEmail(ev.target.value)} required placeholder="email"/>
             <input type="password" value={password} onChange={ev => setPassword(ev.target.value)} required placeholder="password"/>
@@ -33,6 +38,8 @@ function Login(props) {
                 login
             </button>
         </form>
+            <p className={"font-sm"}>This application is only available to Ole Miss Graduate students and Faculty in Computer Science</p>
+        </div>
 
 
     )
