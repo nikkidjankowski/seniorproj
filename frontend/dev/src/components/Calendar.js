@@ -66,24 +66,24 @@ function Calendar(props) {
         console.log(timeslots);
 
         return timeslots.map((item, i) => (
-            <div className={"p-2 m-y-1 b-primary b-1 calendar-item"} key={i}>
-                <div className={"text-black-50 font-sm"}>
+            <div className={"p-1 m-y-1 b-primary-lg b-1 calendar-item"} key={i}>
+                <div className={"text-black-70 font-md"}>
                     {item.time.format("hh:mm a")}
                 </div>
                 {item.appointments.length > 0 ? (
-                    <div className={"bg-primary p-1 text-white"}>
+                    <div className={"bg-blue p-1 text-white font-strong"}>
                         <p>
                             {item.appointments[0].reason}
                         </p>
-                        <p className={"font-sm m-y-0"}>
+                        <p className={"font-sm m-y-1"}>
                             {item.appointments[0].email.replace(/@[a-z\.]+/,"")}
                         </p>
                     </div>
                 ) : (
                     <button
                         onClick={()=> bookRoom(item.time)}
-                        className={"button"}>
-                        book room
+                        className={"button text-red font-strong b-blue hover:bg-blue hover:text-red"}>
+                        BOOK ROOM
                     </button>
                 )}
             </div>
@@ -106,6 +106,9 @@ function Calendar(props) {
         }
     }
 
+    const resetBooking = ()=> {
+        setNewBooking(false);
+    };
     return (
         <div className="w-100p">
             <SelectRoom rooms={rooms} onSelected={selectRoom}/>
@@ -113,9 +116,9 @@ function Calendar(props) {
                 <div className="d-flex w-100p">
                     {days.map(day => (
                         <div style={{minWidth:160}} className="m-1 b-1 b-primary f-1" key={day.getTime()}>
-                            <div style={{height:45}}>
+                            <div style={{height:45}} className={"font-strong text-white bg-blue"}>
                                 {dayjs(day).format("dddd")} <br/>
-                                {dayjs(day).format("MM/DD")} 
+                                {dayjs(day).format("MM/DD")}
                             </div>
                             <hr/>
                             <div>
@@ -127,11 +130,12 @@ function Calendar(props) {
                 </div>
             )}
 
-            {newBooking&&  <BookingForm time={newBooking} onBooking={confirmBooking}/>}
+            {newBooking&&  <BookingForm time={newBooking} onBooking={confirmBooking} close={resetBooking}/>}
 
 
 
         </div>
+
     )
 }
 

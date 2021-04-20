@@ -12,19 +12,23 @@ function Users() {
     }
 
     function deleteUser(id) {
-        api.delete("/users/"+ id).then(loadUsers)
+        let confirm = window.confirm("Are you sure you want to delete user?")
+        if(confirm){
+            api.delete("/users/"+ id).then(loadUsers)
+        }
+
 
     }
 
     return (
-        <div style={{minWidth:"765px"}}>
-            <h2>anything</h2>
-            <section className={"grid-9-3 w-100p"}>
+        <div>
+            <h2>Users</h2>
+            <section className={"grid-9-3 w-100p font-strong"}>
 
-                <div className={"font-strong p-1"}>Email
+                <div className={"font-strong p-1 text-red"}>Email
                 </div>
-                <div>
-                    action
+                <div className={"text-red"}>
+                    Remove User
                 </div>
 
             </section>
