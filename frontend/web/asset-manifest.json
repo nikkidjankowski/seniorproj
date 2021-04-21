@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "http://192.168.33.10/frontend/web/static/css/main.e2f1e722.chunk.css",
+    "main.js": "http://192.168.33.10/frontend/web/static/js/main.14bafd41.chunk.js",
+    "main.js.map": "http://192.168.33.10/frontend/web/static/js/main.14bafd41.chunk.js.map",
+    "runtime-main.js": "http://192.168.33.10/frontend/web/static/js/runtime-main.8f140b1a.js",
+    "runtime-main.js.map": "http://192.168.33.10/frontend/web/static/js/runtime-main.8f140b1a.js.map",
+    "static/js/2.a3069883.chunk.js": "http://192.168.33.10/frontend/web/static/js/2.a3069883.chunk.js",
+    "static/js/2.a3069883.chunk.js.map": "http://192.168.33.10/frontend/web/static/js/2.a3069883.chunk.js.map",
+    "static/js/3.2d874d71.chunk.js": "http://192.168.33.10/frontend/web/static/js/3.2d874d71.chunk.js",
+    "static/js/3.2d874d71.chunk.js.map": "http://192.168.33.10/frontend/web/static/js/3.2d874d71.chunk.js.map",
+    "index.html": "http://192.168.33.10/frontend/web/index.html",
+    "static/css/main.e2f1e722.chunk.css.map": "http://192.168.33.10/frontend/web/static/css/main.e2f1e722.chunk.css.map",
+    "static/js/2.a3069883.chunk.js.LICENSE.txt": "http://192.168.33.10/frontend/web/static/js/2.a3069883.chunk.js.LICENSE.txt",
+    "static/media/weirfall.1f7b585a.png": "http://192.168.33.10/frontend/web/static/media/weirfall.1f7b585a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f140b1a.js",
+    "static/js/2.a3069883.chunk.js",
+    "static/css/main.e2f1e722.chunk.css",
+    "static/js/main.14bafd41.chunk.js"
+  ]
+}

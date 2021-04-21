@@ -1,4 +1,4 @@
-import weirfall from "../weirfall.png"
+import weirfall from "../weirfall.jpg"
 function Home() {
     return(
     <div >

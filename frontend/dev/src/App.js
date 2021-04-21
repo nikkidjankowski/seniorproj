@@ -27,7 +27,7 @@ function App(props) {
         <BrowserRouter>
             <div className="d-flex main-container">
                 <Header loggedInUser={loggedInUser}/>
-                <section className="f-1 container o-y-auto w-10p font-md">
+                <section className="f-1 container o-y-auto w-100p font-md">
 
                     <Switch>
                         <Route exact path="/" component={Home}/>
