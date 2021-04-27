@@ -4,7 +4,7 @@
     "description": "the efficient PHP framework",
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.4||8.*",
+        "php": "^7.3||8.*",
         "ext-json": "*",
         "mnsami/composer-custom-directory-installer": "2.0.*",
         "neoan3-apps/template":"^1",

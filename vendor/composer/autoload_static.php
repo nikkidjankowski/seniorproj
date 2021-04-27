@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit7cc6d224f558754ed7e682d73a965d21
 {
     public static $files = array (
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '9411e91565e343e129079ce22f637fa5' => __DIR__ . '/../..' . '/_neoan/base/_includes.php',
     );
@@ -55,8 +55,8 @@ class ComposerStaticInit7cc6d224f558754ed7e682d73a965d21
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -93,8 +93,8 @@ class ComposerStaticInit7cc6d224f558754ed7e682d73a965d21
         'Neoan3\\Apps\\' => 
         array (
             0 => __DIR__ . '/..' . '/neoan3-apps/db',
-            1 => __DIR__ . '/..' . '/neoan3-apps/session',
-            2 => __DIR__ . '/..' . '/neoan3-apps/jwt',
+            1 => __DIR__ . '/..' . '/neoan3-apps/jwt',
+            2 => __DIR__ . '/..' . '/neoan3-apps/session',
             3 => __DIR__ . '/..' . '/neoan3-apps/stateless',
             4 => __DIR__ . '/..' . '/neoan3-apps/template',
         ),
