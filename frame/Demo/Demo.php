@@ -36,6 +36,9 @@ class Demo extends Serve
 
     public ?AuthObject $authObject;
 
+
+public $environment;
+
     /**
      * Demo constructor.
      * @param Database|null $db
@@ -44,19 +47,23 @@ class Demo extends Serve
     function __construct(Database $db = null, Auth $auth = null)
     {
         parent::__construct();
-        $this->assignProvider('auth', $auth, function (){
+        $this->environment = ['database' => ['name' => getenv('NAME'),
+        'password' => getenv('PASSWORD'),
+        'host' => getenv('HOST'),
+        'user' => getenv('USER')],
+        'secret' => 'asdfasdf'];
+        $this->assignProvider('auth', $auth, function () {
             $this->provider['auth'] = new JwtWrapper();
             $this->provider['auth']->setSecret('my-secret');
         });
 
-        $this->assignProvider('db', $db, function(){
-            try{
-                $credentials = getCredentials();
-                if(isset($credentials[$this->dbCredentials])){
-                    $this->provider['db'] = new DatabaseWrapper($credentials[$this->dbCredentials]);
-                }
+        $this->assignProvider('db', $db, function () {
+            try {
+
+                    $this->provider['db'] = new DatabaseWrapper($this->environment['database']);
+
             } catch (Exception $e) {
-                $this->renderer->addToHead('title', '! No credentials found! Run "neoan3 new database '. $this->dbCredentials .'"');
+                $this->renderer->addToHead('title', '! No credentials found! Run "neoan3 new database ' . $this->dbCredentials . '"');
             }
         });
         $this->Auth = $this->provider['auth'];
@@ -64,7 +71,7 @@ class Demo extends Serve
         /*
          * PHP8 Attributes
          * */
-        if(PHP_MAJOR_VERSION >= 8){
+        if (PHP_MAJOR_VERSION >= 8) {
             $phpAttributes = new UseAttributes();
             $phpAttributes->hookAttributes($this->provider);
             $this->authObject = $phpAttributes->authObject;
