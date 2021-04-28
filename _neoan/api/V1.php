@@ -1,7 +1,8 @@
 <?php
 
 namespace Neoan3\Api;
-
+ini_set('display_errors', true);
+ini_set('error_reporting', E_ALL);
 use Exception;
 use Neoan3\Core\Event;
 use Neoan3\Core\ReflectionWrapper;

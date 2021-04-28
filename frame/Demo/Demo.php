@@ -47,10 +47,13 @@ public $environment;
     function __construct(Database $db = null, Auth $auth = null)
     {
         parent::__construct();
-        $this->environment = ['database' => ['name' => getenv('NAME'),
-        'password' => getenv('PASSWORD'),
-        'host' => getenv('HOST'),
-        'user' => getenv('USER')],
+        $dotenv = \Dotenv\Dotenv::createImmutable(path);
+        $dotenv->load();
+
+        $this->environment = ['database' => ['name' => $_ENV['NAME'],
+        'password' => $_ENV['PASSWORD'],
+        'host' => $_ENV['HOST'],
+        'user' => $_ENV['USER']],
         'secret' => 'asdfasdf'];
         $this->assignProvider('auth', $auth, function () {
             $this->provider['auth'] = new JwtWrapper();
