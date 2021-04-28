@@ -49,10 +49,11 @@ public $environment;
         parent::__construct();
 //        $dotenv = \Dotenv\Dotenv::createImmutable(path);
 //        $dotenv->load();
-        var_dump($_ENV['NAME']);
+//        var_dump($_ENV['NAME']);
         $this->environment = ['database' => ['name' => $_ENV['NAME'],
         'password' => $_ENV['PASSWORD'],
         'host' => $_ENV['HOST'],
+            'assumes_uuid' => true,
         'user' => $_ENV['USER']],
         'secret' => 'asdfasdf'];
         $this->assignProvider('auth', $auth, function () {
