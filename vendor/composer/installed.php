@@ -29,15 +29,6 @@
       ),
       'reference' => 'f42c9110abe98dd6cfe9053c49bc86acc70b2d23',
     ),
-    'graham-campbell/result-type' => 
-    array (
-      'pretty_version' => '1.0.x-dev',
-      'version' => '1.0.9999999.9999999-dev',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'cce288e91826d6d33d76b57f1ad4bdc3f3a8c1d6',
-    ),
     'mnsami/composer-custom-directory-installer' => 
     array (
       'pretty_version' => 'dev-master',
@@ -152,7 +143,7 @@
       array (
         0 => '5.x-dev',
       ),
-      'reference' => 'f8d350d8514ff60b5993dd0121c62299480c989c',
+      'reference' => '8719cc12e2a57ec3432a76989bb4ef773ac75b63',
     ),
     'phpdocumentor/type-resolver' => 
     array (
@@ -162,16 +153,6 @@
       array (
       ),
       'reference' => '6759f2268deb9f329812679e9dcb2d0083b2a30b',
-    ),
-    'phpoption/phpoption' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '1.7.x-dev',
-      ),
-      'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
     ),
     'phpspec/prophecy' => 
     array (
@@ -199,7 +180,7 @@
       array (
         0 => '3.0.x-dev',
       ),
-      'reference' => '8e1b28fa4315f9ab66b5a4ca4c93bd983361eefa',
+      'reference' => '85dd79ebb4c7394d29f134abd4db3c600ce2ef16',
     ),
     'phpunit/php-invoker' => 
     array (
@@ -209,7 +190,7 @@
       array (
         0 => '3.1.x-dev',
       ),
-      'reference' => 'a46c3aae802b80c3442bd85006697666cd587441',
+      'reference' => '9f0c14d68458a25b29b42db99fb5c23a33479741',
     ),
     'phpunit/php-text-template' => 
     array (
@@ -219,7 +200,7 @@
       array (
         0 => '2.0.x-dev',
       ),
-      'reference' => '9e01d4179f9caf8028d0ae48cd84a6427a581793',
+      'reference' => '523c1399af53f5457350c4df99b2ea8a3c1b302c',
     ),
     'phpunit/php-timer' => 
     array (
@@ -229,7 +210,7 @@
       array (
         0 => '5.0.x-dev',
       ),
-      'reference' => '60a62b284ad6770a1fdc7e07bff609be5233edfb',
+      'reference' => '1e086856e0db1a8edd6e78b47e11145e40d74e39',
     ),
     'phpunit/phpunit' => 
     array (
@@ -238,7 +219,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd41e3f632163be390e38fbeac4b1c3b810e6ef2a',
+      'reference' => '0421783c33f5a0bd297e02db2bd5f5d9f99699f5',
     ),
     'sebastian/cli-parser' => 
     array (
@@ -248,7 +229,7 @@
       array (
         0 => '1.0.x-dev',
       ),
-      'reference' => '32fe3bd93f89a92c20992150d9b4a0353e33cb86',
+      'reference' => '8d7dbbf44288f39cd779eba000877a0a0ed323a9',
     ),
     'sebastian/code-unit' => 
     array (
@@ -267,7 +248,7 @@
       array (
         0 => '2.0.x-dev',
       ),
-      'reference' => '0c90ae4074246c4576e341a4eb8a880965b0bfa0',
+      'reference' => '3044cb6b22a3cc3ab3d85d5b98bebb7e0a256074',
     ),
     'sebastian/comparator' => 
     array (
@@ -277,7 +258,7 @@
       array (
         0 => '4.0.x-dev',
       ),
-      'reference' => '7507dc3ba34a0a01a771d4004db63cf2f69ad5ae',
+      'reference' => '5c05cfeac47b1dd4220a26f2a53526f26df8a664',
     ),
     'sebastian/complexity' => 
     array (
@@ -296,7 +277,7 @@
       array (
         0 => '4.0.x-dev',
       ),
-      'reference' => '7e1b9f252c029cfd8a1aef17489db44565181128',
+      'reference' => 'fc54c741786379db0038137f46ca8d5f22499e60',
     ),
     'sebastian/environment' => 
     array (
@@ -306,7 +287,7 @@
       array (
         0 => '5.1.x-dev',
       ),
-      'reference' => 'e403442971a53d2aba4bfb8d51f3c1e67cd0cc8f',
+      'reference' => '9427082157dcf06236628c998b2abdb44225a6e2',
     ),
     'sebastian/exporter' => 
     array (
@@ -316,7 +297,7 @@
       array (
         0 => '4.0.x-dev',
       ),
-      'reference' => '24e3cf476cabd6d4b6f5a95ed2c06c2793b85429',
+      'reference' => 'c7b513206ca2da5be8c969184dc54624cce72c4c',
     ),
     'sebastian/global-state' => 
     array (
@@ -326,7 +307,7 @@
       array (
         0 => '5.0.x-dev',
       ),
-      'reference' => '0f039e95ee9bd338306223844b449de04eb14cb4',
+      'reference' => '31023f78eef92ab1cc6c5625cfc03c0cecd461c6',
     ),
     'sebastian/lines-of-code' => 
     array (
@@ -345,7 +326,7 @@
       array (
         0 => '4.0.x-dev',
       ),
-      'reference' => 'f2ae14774922039da37ba02727d006a00a5697d4',
+      'reference' => 'e6850adbed0155ed6582e2e6a0a0c32f7f06ee0c',
     ),
     'sebastian/object-reflector' => 
     array (
@@ -355,7 +336,7 @@
       array (
         0 => '2.0.x-dev',
       ),
-      'reference' => 'aa101bb19453d2b29a6ab66c2489cd07a84af4cd',
+      'reference' => 'd61f2e1b28f1027e9903a8aa99b0fda9e79e55b2',
     ),
     'sebastian/recursion-context' => 
     array (
@@ -365,7 +346,7 @@
       array (
         0 => '4.0.x-dev',
       ),
-      'reference' => '40cee94304292d3639df961c1b5d6eee0491eec3',
+      'reference' => '76964a313f58c93a2d072c644abf5beffa0adecc',
     ),
     'sebastian/resource-operations' => 
     array (
@@ -385,7 +366,7 @@
       array (
         0 => '2.3.x-dev',
       ),
-      'reference' => '5101d5742b2ed2736e72111bcec63638648e0a5d',
+      'reference' => '875245f69e5e749626e7fb3ded71f8dc92cc4d0b',
     ),
     'sebastian/version' => 
     array (
@@ -415,26 +396,6 @@
       ),
       'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
     ),
-    'symfony/polyfill-mbstring' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => '9ad2f3c9de0273812c616fdf96070a129c3defcb',
-    ),
-    'symfony/polyfill-php80' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-        0 => '1.23.x-dev',
-      ),
-      'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
-    ),
     'theseer/tokenizer' => 
     array (
       'pretty_version' => '1.2.0',
@@ -443,16 +404,6 @@
       array (
       ),
       'reference' => '75a63c33a8577608444246075ea0af0d052e452a',
-    ),
-    'vlucas/phpdotenv' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '5.3.x-dev',
-      ),
-      'reference' => 'b740396414a95cbe868bf7f168f997fe16d970d6',
     ),
     'webmozart/assert' => 
     array (
