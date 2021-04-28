@@ -56,6 +56,7 @@ public $environment;
             'assumes_uuid' => true,
         'user' => $_ENV['USER']],
         'secret' => 'asdfasdf'];
+        var_dump($this->environment);
         $this->assignProvider('auth', $auth, function () {
             $this->provider['auth'] = new JwtWrapper();
             $this->provider['auth']->setSecret('my-secret');
