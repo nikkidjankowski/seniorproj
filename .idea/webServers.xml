@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e3a2cedf-8089-4b92-8724-89b30d8c46f0" name="ndjankow" url="https://turing.cs.olemiss.edu/~ndjankow/">
+        <fileTransfer rootFolder="/home/ndjankow/public_html" accessType="SFTP" host="Turing.cs.olemiss.edu" port="22" sshConfigId="f634bfbd-c7d2-4a5c-bfa1-0aa3f7dfe065" sshConfig="ndjankow@Turing.cs.olemiss.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

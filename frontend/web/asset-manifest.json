@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "https://we-reserve.herokuapp.com/frontend/web/static/css/main.e2f1e722.chunk.css",
+    "main.js": "https://we-reserve.herokuapp.com/frontend/web/static/js/main.aa26b1d6.chunk.js",
+    "main.js.map": "https://we-reserve.herokuapp.com/frontend/web/static/js/main.aa26b1d6.chunk.js.map",
+    "runtime-main.js": "https://we-reserve.herokuapp.com/frontend/web/static/js/runtime-main.75336681.js",
+    "runtime-main.js.map": "https://we-reserve.herokuapp.com/frontend/web/static/js/runtime-main.75336681.js.map",
+    "static/js/2.a3069883.chunk.js": "https://we-reserve.herokuapp.com/frontend/web/static/js/2.a3069883.chunk.js",
+    "static/js/2.a3069883.chunk.js.map": "https://we-reserve.herokuapp.com/frontend/web/static/js/2.a3069883.chunk.js.map",
+    "static/js/3.2d874d71.chunk.js": "https://we-reserve.herokuapp.com/frontend/web/static/js/3.2d874d71.chunk.js",
+    "static/js/3.2d874d71.chunk.js.map": "https://we-reserve.herokuapp.com/frontend/web/static/js/3.2d874d71.chunk.js.map",
+    "index.html": "https://we-reserve.herokuapp.com/frontend/web/index.html",
+    "static/css/main.e2f1e722.chunk.css.map": "https://we-reserve.herokuapp.com/frontend/web/static/css/main.e2f1e722.chunk.css.map",
+    "static/js/2.a3069883.chunk.js.LICENSE.txt": "https://we-reserve.herokuapp.com/frontend/web/static/js/2.a3069883.chunk.js.LICENSE.txt",
+    "static/media/weirfall.ba9cec1b.jpg": "https://we-reserve.herokuapp.com/frontend/web/static/media/weirfall.ba9cec1b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75336681.js",
+    "static/js/2.a3069883.chunk.js",
+    "static/css/main.e2f1e722.chunk.css",
+    "static/js/main.aa26b1d6.chunk.js"
+  ]
+}
