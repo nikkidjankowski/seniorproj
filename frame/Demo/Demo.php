@@ -47,8 +47,8 @@ public $environment;
     function __construct(Database $db = null, Auth $auth = null)
     {
         parent::__construct();
-        $dotenv = \Dotenv\Dotenv::createImmutable(path);
-        $dotenv->load();
+//        $dotenv = \Dotenv\Dotenv::createImmutable(path);
+//        $dotenv->load();
 
         $this->environment = ['database' => ['name' => $_ENV['NAME'],
         'password' => $_ENV['PASSWORD'],
