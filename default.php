@@ -15,6 +15,7 @@ define('default_404','notFound');
         ];
         if(in_array($_SERVER['HTTP_ORIGIN'], $allowed)){
             header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+            //allows user control of the website functions when they are logged in
         }
     }
 

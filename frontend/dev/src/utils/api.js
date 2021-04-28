@@ -14,3 +14,5 @@ api.interceptors.request.use(exitingConfig => {
 })
 
 export default api;
+
+//creates api and allows the session storage token which is the local user be able to see the  routes on the website

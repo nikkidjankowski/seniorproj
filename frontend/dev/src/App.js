@@ -21,12 +21,13 @@ function App(props) {
             localUser = JSON.parse(sessionStorage.user);
         }
         setLoggedInUser(localUser);
+        //confirms the session has a user and setting that local user for the session
 
     }
     return (
         <BrowserRouter>
             <div className="d-flex main-container">
-                <Header loggedInUser={loggedInUser}/>
+                <Header loggedInUser={loggedInUser}/> //this browser path and route only shows when the local user has become the logged in user
                 <section className="f-1 container o-y-auto w-100p font-md">
 
                     <Switch>

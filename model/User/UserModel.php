@@ -44,6 +44,7 @@ class UserModel implements Model
         $t = new Transform('user', self::$db);
         return $t->update($modelArray);
     }
+    //this function is called when the user updates the password and returns the updated password to the database
 
     /**
      * @param array $providers
@@ -67,6 +68,7 @@ class UserModel implements Model
         $modelArray['password'] = '=' . password_hash($modelArray['password'], PASSWORD_DEFAULT);
         $t = new Transform('user', self::$db);
         return $t->create($modelArray);
+        //creates the array and user for the user table and adds the users to the database
 
     }
 

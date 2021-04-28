@@ -5,7 +5,8 @@ function Login(props) {
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+//creating variables to access the database info
+    //made history variable to call history from the server to keep user logged in
     const callLogin = async (ev) => {
         ev.preventDefault();
         // http://192.168.33.10/api.v1/login
@@ -16,6 +17,7 @@ function Login(props) {
             })
             sessionStorage.setItem('user', JSON.stringify(data.user))
             sessionStorage.setItem('token', data.token)
+            //created sessions each time user logs in correctly
             props.updateSession();
             history.push("/");
         } catch(e){

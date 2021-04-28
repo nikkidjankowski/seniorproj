@@ -50,5 +50,6 @@ class RoomModel implements Model{
             }
         }
     }
+//connects the database to the backend
 
 }

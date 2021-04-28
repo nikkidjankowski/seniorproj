@@ -21,7 +21,7 @@ class ScheduleController extends Demo
     function getSchedule($day, $room_id, $params = [])
     {
         // $this->Auth->restrict();
-
+        //returns all the bookings in the database grabbed from schedule model
         return ScheduleModel::getBookings($day, $room_id);
     }
 
@@ -35,6 +35,8 @@ class ScheduleController extends Demo
         $newEntry["booking_time"] = "=" . $newEntry["booking_time"];
 
         return ScheduleModel::create($newEntry);
+        //this function only works if the user is authorized and logged in
+        //reloads the schedule so the new booking entry is sent to the database
 
     }
 }

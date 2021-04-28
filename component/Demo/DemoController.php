@@ -16,7 +16,7 @@ class DemoController extends Unicore
      */
     function init()
     {
-        header('Location: https://we-reserve.herokuapp.com/frontend/web');
+        header('Location: http://we-reserve.herokuapp.com/frontend/web');
         $info = json_decode(file_get_contents(path . '/composer.json'), true);
         $info['installation'] = path;
         $info['base'] = base;

@@ -39,6 +39,7 @@ class ScheduleModel implements Model{
         foreach ($providers as $key => $provider){
             if($key === 'db'){
                 self::$db = $provider;
+                // creates array for database with information needed for schedule
             }
         }
     }
@@ -46,6 +47,6 @@ class ScheduleModel implements Model{
     public static function getBookings($day, $room_id)
     {
         return self::$db->smart('>SELECT schedule.*, user.email FROM schedule JOIN user ON user.id = schedule.user_id WHERE booking_day >= {{day}} AND schedule.delete_date IS NULL and room_id = UNHEX({{room}}) order by booking_day, booking_time',['day' => $day, 'room' => $room_id]);
-
+        //returns all bookings that have already been provided
     }
 }

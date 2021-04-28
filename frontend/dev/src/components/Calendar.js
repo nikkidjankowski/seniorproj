@@ -12,7 +12,7 @@ function Calendar(props) {
     const [selectedRoom, setSelectedRoom] = useState(null);
     const getDateString = (date) => {
         return dayjs(date).format("YYYY-MM-DD");
-
+        //returns the current date so the website knows what days should be shown on calendar
     }
 
 
@@ -21,6 +21,7 @@ function Calendar(props) {
 
 
             const today = new Date();
+
             const currentWeek = [];
             try {
                 const roomCall = await api.get('/room');
@@ -32,6 +33,7 @@ function Calendar(props) {
                 currentWeek.push(new Date(today.getTime() + ((24 * 60 * 60 * 1000) * i)))
             }
             setDays(currentWeek);
+            //creates days for the next 31 days for each room
         }
         call();
     }, [])
@@ -41,21 +43,25 @@ function Calendar(props) {
     }
     const confirmBooking = (reason) => {
         api.post("/schedule",{
+
             room_id:selectedRoom,
             booking_day:dayjs(newBooking.time).format("YYYY-MM-DD"),
             booking_time:dayjs(newBooking.time).format("HH:mm:ss"),
             reason
+            //api posts the booking for the selected room with the day and time
         }).then(result => {
             setNewBooking(false)
             selectRoom(selectedRoom)
+            //when select room is called and new booking is false meaning no new booking is being created
         })
     }
     const renderSchedule = day => {
         let todaysSchedule = schedule.filter(item => {
-
+            //creates the schedule for the day
             return item.booking_day === getDateString(day)
         })
         const timeslots = [];
+        //timeslots help build the calendar look in the front end
         for (let i = 8; i < 21; i++) {
             const now = dayjs(`${getDateString(day)} ${i}:00:00`);
             timeslots.push({
@@ -64,6 +70,7 @@ function Calendar(props) {
             })
         }
         console.log(timeslots);
+        //displays the time slots
 
         return timeslots.map((item, i) => (
             <div className={"p-1 m-y-1 b-primary-lg b-1 calendar-item"} key={i}>

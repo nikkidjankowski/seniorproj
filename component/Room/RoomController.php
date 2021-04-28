@@ -27,9 +27,11 @@ class RoomController extends Demo{
     {
         //$this->Auth->restrict();
         RoomModel::init($this->provider);
+        //calls room model to grab the array made for the database
        if($id){
           return RoomModel::get($id);
             }
+       //gets all room ids in the data base
 
         $all = RoomModel::find([]);
 
@@ -46,6 +48,8 @@ class RoomController extends Demo{
         $this->Auth->restrict();
         RoomModel::init($this->provider);
         return RoomModel::create($body);
+        //this function only works for users who are logged in
+        //returns the body on information the room model file calls for
 
     }
 }

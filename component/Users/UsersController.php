@@ -26,6 +26,7 @@ class UsersController extends Demo{
     {
         $this->Auth->restrict(["faculty"]);
         return $this->loadModel(UserModel::class)::find($params);
+        //this function is restricted to faculty so its returns all users in the system and search for delete date to confirm the deletion
     }
 
     /**
@@ -38,6 +39,6 @@ class UsersController extends Demo{
     {
         $this->Auth->restrict(["faculty"]);
         return $this->loadModel(UserModel::class)::delete($id);
-
+        //this officially removes the user from the data base
     }
 }

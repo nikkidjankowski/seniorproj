@@ -44,12 +44,15 @@ public $environment;
      * @param Database|null $db
      * @param Auth|null $auth
      */
+    //testing database used from testing the website with the neoan3 database
     function __construct(Database $db = null, Auth $auth = null)
     {
         parent::__construct();
 //        $dotenv = \Dotenv\Dotenv::createImmutable(path);
 //        $dotenv->load();
 //        var_dump($_ENV['NAME']);
+        //after using neoan3 for a testing database
+        //created a new database for deployment with Jawsdb
         $this->environment = ['database' => ['name' => $_ENV['NAME'],
         'password' => $_ENV['PASSWORD'],
         'host' => $_ENV['HOST'],
